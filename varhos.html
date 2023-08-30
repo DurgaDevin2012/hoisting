@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<title> hoisting </title>
+	</head>
+	<body>
+		<script>
+			console.log(a);
+			const a=10;
+			console.log(b);
+			let b=5;
+		</script>
+		<script>
+			console.log(add());
+			function add(){
+			console.log("hi");
+			}
+			
+		</script>
+		<script>
+			const sub=()=>{
+			console.log("hi");
+			}
+			sub()
+		</script>
+		<script>
+			function call(){
+			console.log(" Hey What's up");
+			}
+			setTimeout(call,3000)
+		</script>
+		<script>
+			function calll(){
+			console.log(" Hey What's up");
+			}
+			 var q=setInterval(calll,3000)
+			function stop(){
+			clearInterval(q)
+			}
+			stop()
+		</script>
+		<script>
+			setTimeout(()=>{
+			console.log("hi")
+			},5000)
+		</script>
+		<script>
+			var v=setInterval(()=>{
+			console.log("hi")
+			},5000)
+			clearInterval((v)=>{
+			console.log("hi")
+			},5000)
+		</script>
+		<script>
+			function add(a,b=0){
+			console.log(a+b);
+			}
+			add(5);
+			<!-- let x = {a:1, b:2, c:{nestedA:1, nestedB:2}, d:4} -->
+			<!-- let y = {...x} -->
+			<!-- y.c.nestedB = 4 -->
+			<!-- console.log(x.c.nestedB) -->
+		</script>
+	</body>
+</html>
